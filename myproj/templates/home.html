@@ -1,0 +1,41 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>welcome to my django class 1</h1>
+    <!-- <h1>welcome to my django class</h1> -->
+    <h1>welcome to my django class {{myname}}</h1>
+
+    <!-- <h1>This is python class</h1>
+    <h1>This is JavaScript class</h1>
+    <h1>This is Java class</h1>
+    <h1>This is Django class</h1> -->
+
+    {% for item in mylist %}
+        <h1>This is a {{item}} class</h1>
+
+    {% endfor %}
+
+    <a href="{% url 'aboutpage' %}">About Page</a>
+
+    {% for item in myblog %}
+        <h3>Title: {{item.title}}</h3>
+        <h3>Content: {{item.content}}</h3>
+
+        {% if item.author %}
+
+            <h3>Author: {{item.author}}</h3>
+
+        {% else %}
+
+            <h3>Author: Unknown/Anonymous</h3>
+
+        {% endif %}
+
+    {% endfor %}
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+<!-- <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>This is Index Page</h1>
+</body>
+</html> -->
+
+
+
+{% block content %}
+
+    <h1>This is Index Page</h1>
+
+    <form action="{% url 'myinfo' %}" method="post">
+
+        {% csrf_token %}
+
+        Name : <input type="text" name="myname"><br><br>
+
+        Age: <input type="text" name="myage"><br><br>
+
+        <input type="checkbox" name = "tech" value="python">Python
+        <input type="checkbox" name = "tech" value="java">Java
+        <input type="checkbox" name = "tech" value="kotlin">Kotlin <br><br>
+
+        Gender: <input type="radio" name="gender" value="m">Male
+        <input type="radio" name="gender" value="f">Female <br><br>
+
+        <select name="city" id="">
+            <option value="london">London</option>
+            <option value="lagos">Lagos</option>
+            <option value="abuja">Abuja</option>
+            <option value="hamburg">Hamburg</option>
+        </select>
+
+        <input type="submit" value="Submit">
+    </form><br><br>
+
+    <h3>{{mydetail}}</h3>
+
+{% endblock %}

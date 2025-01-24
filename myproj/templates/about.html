@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+<!-- <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <marquee behavior="" direction="right"><h1>This is about page</h1></marquee>
+
+    <a href="{% url 'otherpage' %}">Another Page</a>
+</body>
+</html> -->
+
+
+
+
+{% block content %}
+    
+    <marquee behavior="" direction="right"><h1>This is about page</h1></marquee>
+
+    <a href="{% url 'otherpage' %}">Another Page</a>
+    
+{% endblock %}
